@@ -2,6 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import Error from './components/Error.jsx'
+import Music from './Components/Music.jsx'
+import Comedy from './Components/Comedy.jsx'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,17 +17,17 @@ const router = createBrowserRouter([
 
     children:[
 
-      {
+      { 
         path: "/music",
-        element: <h1> All the Music albums are here</h1>,
+        element: <Music></Music>,
       },
       {
         path: "/comedy",
-        element: <h1>All the Comedy Videos are here </h1>,
+        element: <Comedy></Comedy>,
       },
       {
         path: "/drawing",
-        element: <h1>All the  Drawings are here  </h1>,
+        element: <Error></Error> ,
       },
     ]
 
